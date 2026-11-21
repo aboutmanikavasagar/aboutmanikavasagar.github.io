@@ -2,6 +2,8 @@
 
 Personal portfolio website: Chief Operating Officer leading Technology, Business Development and Operations, and bringing AI products to market.
 
+**Live site:** https://aboutmanikavasagar.github.io
+
 A single static page with no build step. It is hosted free on GitHub Pages.
 
 ## Files
@@ -9,7 +11,8 @@ A single static page with no build step. It is hosted free on GitHub Pages.
 | File | Purpose |
 |---|---|
 | `index.html` | The whole website (styles, diagrams and scripts are inline) |
-| `photo.jpg` | Portrait used in the About and Contact sections |
+| `photo.jpg` | Portrait used in the About section |
+| `photo-contact.jpg` | Photo used in the Contact section |
 | `resume.pdf` | Résumé offered by the "Download résumé" buttons |
 
 ## Updating the site
