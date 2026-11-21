@@ -441,6 +441,55 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .nav ul a,.nav .cta,.brand span{white-space:nowrap}
 @media (max-width:1300px){.nav ul{gap:20px}.nav ul li.opt{display:none}}
 
+/* AI spotlight */
+.ai-rail{display:flex;justify-content:center;margin:-22px 0 34px}
+.ai-rail span{font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;padding:8px 18px;border-radius:999px;background:linear-gradient(90deg,var(--teal),var(--blue));box-shadow:0 10px 24px -10px rgba(17,145,124,.6)}
+.ai-spot{position:relative;border-radius:26px;padding:44px 40px 40px;color:#fff;overflow:hidden;
+  background:radial-gradient(600px 400px at 85% 0%,rgba(60,127,196,.35),transparent 65%),radial-gradient(500px 400px at 0% 100%,rgba(17,145,124,.32),transparent 65%),var(--navy);
+  box-shadow:0 0 0 1px rgba(95,217,194,.28),0 40px 90px -40px rgba(11,27,51,.7)}
+.ai-spot.hide,.more-title.hide,.svc-grid.hide{display:none}
+.ai-spot-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:center}
+.ai-badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:999px;color:var(--navy);background:linear-gradient(90deg,var(--teal-l),var(--gold-l))}
+.ai-spot-copy h3{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.2vw,42px);line-height:1.12;margin-top:18px;letter-spacing:-.01em}
+.ai-spot-copy h3 em{color:var(--teal-l)}
+.ai-spot-copy>p{color:#c3cede;margin-top:14px;font-size:16.5px;max-width:560px}
+.ai-benefits{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 22px;margin-top:24px}
+.ai-benefits li{padding-left:30px;position:relative}
+.ai-benefits li::before{content:"✦";position:absolute;left:0;top:0;width:22px;height:22px;border-radius:7px;background:rgba(95,217,194,.16);color:var(--teal-l);display:grid;place-items:center;font-size:11px}
+.ai-benefits b{display:block;font-size:15px}
+.ai-benefits span{display:block;font-size:13.5px;color:#a9b6ca;margin-top:2px}
+.ai-cta{margin-top:28px}
+.ai-core{width:100%;max-width:420px;margin:0 auto}
+.ai-core .flow path{animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-22}}
+.ai-core .pulse-ring{transform-origin:180px 160px;animation:corePulse 3s ease-in-out infinite}
+@keyframes corePulse{0%,100%{transform:scale(.9);opacity:.7}50%{transform:scale(1.15);opacity:1}}
+.ai-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.svc.ai{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;--c:var(--teal-l);--cbg:rgba(95,217,194,.14);--cink:var(--teal-l)}
+.svc.ai:hover{border-color:rgba(95,217,194,.5);box-shadow:0 24px 48px -24px rgba(0,0,0,.6)}
+.svc.ai::after{background:linear-gradient(90deg,var(--teal-l),var(--blue-l))}
+.svc.ai .svc-ic{background:linear-gradient(135deg,rgba(95,217,194,.25),rgba(127,179,236,.2))}
+.svc.ai p{color:#b5c0d2}
+.svc.ai li{background:rgba(255,255,255,.08);color:#e3e9f2}
+.pill-g.ai{background:linear-gradient(90deg,rgba(95,217,194,.2),rgba(127,179,236,.2));color:var(--teal-l)}
+.svc.ai .enq{color:var(--teal-l)}
+.svc.flagship{border-color:rgba(230,191,114,.55);background:linear-gradient(160deg,rgba(230,191,114,.14),rgba(255,255,255,.04) 60%)}
+.svc.flagship .enq{color:var(--gold-l)}
+.flag{position:absolute;top:16px;right:-34px;transform:rotate(45deg);background:var(--gold);color:var(--navy);font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 40px}
+.svc.flagship .pill-g{margin-right:34px}
+.more-title{font-family:var(--serif);font-weight:500;font-size:26px;margin:56px 0 20px}
+@media (max-width:1040px){
+  .ai-spot-top{grid-template-columns:minmax(0,1fr)}
+  .ai-core{max-width:380px}
+  .ai-cards{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .ai-spot{padding:28px 20px;border-radius:20px}
+  .ai-benefits{grid-template-columns:minmax(0,1fr)}
+  .ai-cta{width:100%;justify-content:center}
+  .ai-rail{margin:-6px 0 28px}
+}
+
 /* reveal */
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -1105,26 +1154,99 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div class="sec-head rv">
       <span class="label">Services</span>
       <h2 class="title">How I can help your business <em>build, grow and transform.</em></h2>
-      <p class="lede">Sixteen years of delivery, now available to your organisation — from building the software to growing revenue and running the operation.</p>
+      <p class="lede">AI-first services backed by sixteen years of delivery — from digitalising your business with AI to growing revenue and running the operation.</p>
     </div>
 
     <!-- Overview infographic -->
     <div class="svc-map rv" aria-hidden="true">
-      <div class="node n-b"><b>Build</b><span>Software · Digitalisation · Cloud</span></div>
+      <div class="node n-b"><b>Build</b><span>AI Digitalisation · Software · Cloud</span></div>
       <div class="arrow"></div>
-      <div class="node n-g"><b>Grow</b><span>Sales · Marketing · Go-to-market</span></div>
+      <div class="node n-g"><b>Grow</b><span>AI Marketing · Sales · Go-to-market</span></div>
       <div class="arrow"></div>
-      <div class="node n-t"><b>Transform</b><span>AI · Delivery · Operations</span></div>
+      <div class="node n-t"><b>Transform</b><span>AI Transformation · Delivery · Ops</span></div>
     </div>
+    <div class="ai-rail rv"><span>✦ AI built into every stage</span></div>
 
     <div class="svc-tabs rv" role="tablist" aria-label="Filter services">
       <button class="on" data-f="all" role="tab" aria-selected="true">All services</button>
+      <button data-f="ai" role="tab" aria-selected="false">✦ AI</button>
       <button data-f="build" role="tab" aria-selected="false">Build</button>
       <button data-f="grow" role="tab" aria-selected="false">Grow</button>
       <button data-f="transform" role="tab" aria-selected="false">Transform</button>
     </div>
 
-    <div class="svc-grid">
+    <!-- AI spotlight -->
+    <div class="ai-spot rv" id="ai-services">
+      <div class="ai-spot-top">
+        <div class="ai-spot-copy">
+          <span class="ai-badge">✦ AI-first services</span>
+          <h3>Put AI to work in your business — <em>practically, safely and measurably.</em></h3>
+          <p>From your first AI use case to a fully AI-digitalised operation: I help you choose what's worth automating, build it into how your team works, and prove the return.</p>
+          <ul class="ai-benefits">
+            <li><b>Less manual work</b><span>Automate repetitive admin, data entry and reporting.</span></li>
+            <li><b>Faster decisions</b><span>Live dashboards and AI insights instead of month-end surprises.</span></li>
+            <li><b>Always-on engagement</b><span>AI assistants and campaigns that respond while you sleep.</span></li>
+            <li><b>Responsible by design</b><span>Data protection and AI governance built in from day one.</span></li>
+          </ul>
+          <a href="#enquire" class="btn gold ai-cta" data-pick="AI Digitalisation">Start your AI journey
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <svg class="ai-core" viewBox="0 0 360 320" role="img" aria-label="Illustration: AI at the centre, connected to sales, operations, finance, customers, marketing and people">
+          <defs>
+            <radialGradient id="coreGlow"><stop offset="0" stop-color="#5fd9c2" stop-opacity=".45"/><stop offset="1" stop-color="#5fd9c2" stop-opacity="0"/></radialGradient>
+            <linearGradient id="coreFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#11917c"/><stop offset="1" stop-color="#3c7fc4"/></linearGradient>
+          </defs>
+          <ellipse cx="180" cy="160" rx="132" ry="112" fill="none" stroke="rgba(255,255,255,.12)" stroke-dasharray="3 6"/>
+          <g class="flow" stroke="#5fd9c2" stroke-width="1.6" stroke-dasharray="4 7" fill="none" opacity=".75">
+            <path d="M180 160 L180 46"/><path d="M180 160 L292 101"/><path d="M180 160 L292 219"/>
+            <path d="M180 160 L180 274"/><path d="M180 160 L68 219"/><path d="M180 160 L68 101"/>
+          </g>
+          <circle class="pulse-ring" cx="180" cy="160" r="70" fill="url(#coreGlow)"/>
+          <rect x="140" y="120" width="80" height="80" rx="20" fill="url(#coreFill)" stroke="rgba(255,255,255,.4)"/>
+          <g stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-linecap="round">
+            <path d="M160 114v-8M180 114v-8M200 114v-8M160 206v8M180 206v8M200 206v8M134 140h-8M134 160h-8M134 180h-8M226 140h8M226 160h8M226 180h8"/>
+          </g>
+          <text x="180" y="171" text-anchor="middle" fill="#fff" font-family="Fraunces,Georgia,serif" font-size="30" font-weight="600">AI</text>
+          <g font-family="Manrope,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+            <rect x="132" y="31" width="96" height="30" rx="15" fill="#112747" stroke="#e6bf72"/><text x="180" y="51" fill="#fff">Sales</text>
+            <rect x="244" y="86" width="96" height="30" rx="15" fill="#112747" stroke="#5fd9c2"/><text x="292" y="106" fill="#fff">Operations</text>
+            <rect x="244" y="204" width="96" height="30" rx="15" fill="#112747" stroke="#7fb3ec"/><text x="292" y="224" fill="#fff">Finance</text>
+            <rect x="132" y="259" width="96" height="30" rx="15" fill="#112747" stroke="#e6bf72"/><text x="180" y="279" fill="#fff">Customers</text>
+            <rect x="20" y="204" width="96" height="30" rx="15" fill="#112747" stroke="#5fd9c2"/><text x="68" y="224" fill="#fff">Marketing</text>
+            <rect x="20" y="86" width="96" height="30" rx="15" fill="#112747" stroke="#7fb3ec"/><text x="68" y="106" fill="#fff">People</text>
+          </g>
+          <text x="180" y="314" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11.5" fill="#9fb0c8">AI connected across your whole business</text>
+        </svg>
+      </div>
+
+      <div class="ai-cards">
+        <article class="svc ai flagship" data-g="build" data-ai="1">
+          <span class="flag">Flagship</span>
+          <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="10" rx="1.5"/><path d="M5.5 6.5h3M5.5 9h3"/><rect x="13" y="11" width="8" height="10" rx="1.5"/><path d="M14 4h3.5A2.5 2.5 0 0 1 20 6.5V9"/><path d="M18 7.5l2 2 2-2"/><path d="M10 20H6.5A2.5 2.5 0 0 1 4 17.5V15"/><path d="M2 16.5l2-2 2 2"/><path d="M17 14.5l.5 1.2 1.2.5-1.2.5-.5 1.2-.5-1.2-1.2-.5 1.2-.5z"/></svg></div><span class="pill-g ai">AI-powered</span></div>
+          <h3>AI Digitalisation</h3>
+          <p>Transform how your business runs by digitalising it with AI built in — so processes run themselves and your team focuses on growth.</p>
+          <ul><li>Process automation</li><li>AI chatbots &amp; assistants</li><li>Document &amp; data extraction</li><li>Smart dashboards</li></ul>
+          <button class="enq" data-svc="AI Digitalisation">Enquire <span>→</span></button>
+        </article>
+        <article class="svc ai" data-g="transform" data-ai="1">
+          <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9.5 15l1.5-6 1.5 6M10 13h2M15 9v6"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></svg></div><span class="pill-g ai">AI-powered</span></div>
+          <h3>AI Transformation</h3>
+          <p>A clear, measured path to AI adoption — from readiness and roadmap to AI-assisted teams, agentic automation and governance.</p>
+          <ul><li>AI readiness &amp; roadmap</li><li>AI-assisted teams</li><li>Agentic workflows</li><li>AI governance</li></ul>
+          <button class="enq" data-svc="AI Transformation">Enquire <span>→</span></button>
+        </article>
+        <article class="svc ai" data-g="grow" data-ai="1">
+          <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M14.5 9a3.5 3.5 0 0 1 0 6"/><path d="M19 3.5l.7 1.6 1.6.7-1.6.7L19 8.1l-.7-1.6-1.6-.7 1.6-.7z"/></svg></div><span class="pill-g ai">AI-powered</span></div>
+          <h3>AI-Automated Digital Marketing</h3>
+          <p>Always-on marketing powered by AI — content, campaigns and lead funnels that keep working while you do.</p>
+          <ul><li>AI content</li><li>Campaign automation</li><li>Lead funnels</li><li>CRM integration</li></ul>
+          <button class="enq" data-svc="AI-Automated Digital Marketing">Enquire <span>→</span></button>
+        </article>
+      </div>
+    </div>
+
+    <h3 class="more-title rv" id="moreTitle">More ways I can help</h3>
+    <div class="svc-grid" id="moreGrid">
       <article class="svc rv" data-g="build">
         <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8h18"/><path d="M10 12l-2 2 2 2M14 12l2 2-2 2"/></svg></div><span class="pill-g b">Build</span></div>
         <h3>Software Development</h3>
@@ -1133,20 +1255,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <button class="enq" data-svc="Software Development">Enquire <span>→</span></button>
       </article>
       <article class="svc rv" data-g="build">
-        <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="10" rx="1.5"/><path d="M5.5 6.5h3M5.5 9h3"/><rect x="13" y="11" width="8" height="10" rx="1.5"/><path d="M14 4h3.5A2.5 2.5 0 0 1 20 6.5V9"/><path d="M18 7.5l2 2 2-2"/><path d="M10 20H6.5A2.5 2.5 0 0 1 4 17.5V15"/><path d="M2 16.5l2-2 2 2"/></svg></div><span class="pill-g b">Build</span></div>
-        <h3>Business Digitalisation</h3>
-        <p>Move paper, spreadsheets and manual steps onto connected digital systems your team will actually use.</p>
-        <ul><li>Process mapping</li><li>POS &amp; e-commerce</li><li>Workflow systems</li><li>SOPs to software</li></ul>
-        <button class="enq" data-svc="Business Digitalisation">Enquire <span>→</span></button>
-      </article>
-      <article class="svc rv" data-g="build">
         <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9.5a4 4 0 0 1-.5 8.5z"/><path d="M12 10.5l2.5 1v2c0 1.5-1 2.5-2.5 3-1.5-.5-2.5-1.5-2.5-3v-2z"/></svg></div><span class="pill-g b">Build</span></div>
         <h3>Cloud &amp; Secure Architecture</h3>
         <p>AWS cloud, solution architecture and secure-by-design delivery — including platforms for regulated sectors.</p>
         <ul><li>AWS cloud</li><li>Solution design</li><li>Cyber security</li><li>QA &amp; UAT governance</li></ul>
         <button class="enq" data-svc="Cloud &amp; Secure Architecture">Enquire <span>→</span></button>
       </article>
-
       <article class="svc rv" data-g="grow">
         <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M15.5 8.5L20 4M17 4h3v3"/></svg></div><span class="pill-g g">Grow</span></div>
         <h3>Business Development</h3>
@@ -1155,26 +1269,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <button class="enq" data-svc="Business Development">Enquire <span>→</span></button>
       </article>
       <article class="svc rv" data-g="grow">
-        <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1z"/><path d="M14.5 9a3.5 3.5 0 0 1 0 6"/><path d="M19 3.5l.7 1.6 1.6.7-1.6.7L19 8.1l-.7-1.6-1.6-.7 1.6-.7z"/></svg></div><span class="pill-g g">Grow</span></div>
-        <h3>AI-Automated Digital Marketing</h3>
-        <p>Always-on marketing powered by AI — content, campaigns and lead funnels that keep working while you do.</p>
-        <ul><li>AI content</li><li>Campaign automation</li><li>Lead funnels</li><li>CRM integration</li></ul>
-        <button class="enq" data-svc="AI-Automated Digital Marketing">Enquire <span>→</span></button>
-      </article>
-      <article class="svc rv" data-g="grow">
         <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15l-2-2c1-4 4-8.5 11-9 0 7-5 10-9 11z"/><circle cx="14.5" cy="9.5" r="1.6"/></svg></div><span class="pill-g g">Grow</span></div>
         <h3>Product Strategy &amp; Go-to-Market</h3>
         <p>From idea and use-case validation to roadmap, positioning and a well-prepared market launch.</p>
         <ul><li>Use-case validation</li><li>Product roadmap</li><li>Positioning</li><li>Launch plan</li></ul>
         <button class="enq" data-svc="Product Strategy &amp; Go-to-Market">Enquire <span>→</span></button>
-      </article>
-
-      <article class="svc rv" data-g="transform">
-        <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5"/><path d="M9.5 15l1.5-6 1.5 6M10 13h2M15 9v6"/><path d="M9 2.5v3M15 2.5v3M9 18.5v3M15 18.5v3M2.5 9h3M2.5 15h3M18.5 9h3M18.5 15h3"/></svg></div><span class="pill-g t">Transform</span></div>
-        <h3>AI Transformation</h3>
-        <p>Practical, measured AI adoption — an AI roadmap, AI-assisted teams, agentic automation and AI governance.</p>
-        <ul><li>AI roadmap</li><li>AI-assisted engineering</li><li>Agentic workflows</li><li>AI governance</li></ul>
-        <button class="enq" data-svc="AI Transformation">Enquire <span>→</span></button>
       </article>
       <article class="svc rv" data-g="transform">
         <div class="svc-top"><div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M7 9h6M10 12.5h7M8 16h5" stroke-width="2.4"/></svg></div><span class="pill-g t">Transform</span></div>
@@ -1347,9 +1446,14 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
 /* services: filter tabs, enquiry planner */
 (() => {
   const tabs = document.querySelectorAll('.svc-tabs button'), cards = document.querySelectorAll('.svc');
+  const spot = document.getElementById('ai-services'), moreT = document.getElementById('moreTitle'), moreG = document.getElementById('moreGrid');
   tabs.forEach(t => t.addEventListener('click', () => {
+    const f = t.dataset.f;
     tabs.forEach(x => { x.classList.toggle('on', x === t); x.setAttribute('aria-selected', x === t); });
-    cards.forEach(c => { const show = t.dataset.f === 'all' || c.dataset.g === t.dataset.f; c.classList.toggle('hide', !show); if (show) c.classList.add('in'); });
+    cards.forEach(c => { const show = f === 'all' || c.dataset.g === f || (f === 'ai' && c.dataset.ai); c.classList.toggle('hide', !show); if (show) c.classList.add('in'); });
+    spot.classList.toggle('hide', !spot.querySelector('.svc:not(.hide)'));
+    const anyMore = !!moreG.querySelector('.svc:not(.hide)');
+    moreT.classList.toggle('hide', !anyMore); moreG.classList.toggle('hide', !anyMore);
   }));
 
   const PHONE = '60164864430', EMAIL = 'manikavasagarm@gmail.com';
@@ -1368,6 +1472,7 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
     setTimeout(() => document.getElementById('plName').focus({preventScroll: true}), reduce ? 0 : 600);
   }));
 
+  document.querySelectorAll('[data-pick]').forEach(a => a.addEventListener('click', () => { const c = chip(a.dataset.pick); if (c) c.setAttribute('aria-pressed', 'true'); }));
   const err = document.getElementById('plErr');
   const compose = () => {
     const picked = [...chipsBox.children].filter(c => c.getAttribute('aria-pressed') === 'true').map(c => c.textContent);
